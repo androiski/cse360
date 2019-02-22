@@ -23,7 +23,9 @@ public class Calculator {
 	 * Default constructor for calculator class
 	 */
 	public Calculator () {
+		
 		total = 0;  // not needed - included for clarity
+		
 	}
 	
 	/**
@@ -31,7 +33,9 @@ public class Calculator {
 	 * @return the int total of calculator
 	 */
 	public int getTotal () {
-		return 0;
+		
+		return this.total;
+		
 	}
 	
 	/**
@@ -40,12 +44,16 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		
+		this.total += value;
+		
 	}
 	/**
 	 * Method for performing a subtract to total
 	 * @param value is subtracted from total
 	 */
 	public void subtract (int value) {
+		
+		this.total -= value;
 		
 	}
 	
@@ -55,6 +63,8 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		
+		this.total *= value;
+		
 	}
 	
 	/**
@@ -63,6 +73,12 @@ public class Calculator {
 	 */
 	public void divide (int value) {
 		
+		if(value == 0) {
+			this.total = 0;
+		}
+		else {
+			this.total /= value;
+		}
 	}
 	
 	/**
@@ -70,6 +86,8 @@ public class Calculator {
 	 * @return a string displaying the operations executed in succession 
 	 */
 	public String getHistory () {
+		
 		return "";
+		
 	}
 }
