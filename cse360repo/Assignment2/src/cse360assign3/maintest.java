@@ -12,13 +12,12 @@ public class maintest{
 		while(scan.hasNext())
 		{
 		int var = scan.nextInt();
-
 		testClass.insert(var);
-		//testClass.print();
+		System.out.println(testClass.toString());
 		
 
 		c++;
-		if (c == 5) {
+		if (c%5 == 0) {
 			int key = scan.nextInt();
 
 			testClass.delete(key);
